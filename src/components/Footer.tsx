@@ -23,16 +23,16 @@ export default function Footer() {
           <div>
             <h3 className="font-black text-xl sm:text-2xl text-white mb-4 sm:mb-6 uppercase tracking-tight">Quick Links</h3>
             <div className="space-y-3">
-              <Link to="/" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1 inline-block">
+              <Link to="/" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1">
                 → Home
               </Link>
-              <Link to="/tools" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1 inline-block">
+              <Link to="/tools" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1">
                 → Tools
               </Link>
-              <Link to="/about" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1 inline-block">
+              <Link to="/about" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1">
                 → About
               </Link>
-              <Link to="/contact" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1 inline-block">
+              <Link to="/contact" className="block text-white hover:text-[#00FF80] font-bold text-lg transition-colors hover:translate-x-1">
                 → Contact
               </Link>
             </div>
