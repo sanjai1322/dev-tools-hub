@@ -17,27 +17,27 @@ export default function Navbar() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="border-b-4 border-black bg-[#FF0080] sticky top-0 z-50">
+    <nav className="border-b-[6px] border-black bg-[#FF0080] sticky top-0 z-50 shadow-[0_6px_0px_#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center gap-2 cursor-pointer">
-            <div className="w-10 h-10 bg-[#00FF80] border-4 border-black flex items-center justify-center font-bold text-xl shadow-[4px_4px_0px_#000000]">
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex items-center gap-3 cursor-pointer group">
+            <div className="w-14 h-14 bg-[#00FF80] border-[5px] border-black flex items-center justify-center font-black text-2xl shadow-[6px_6px_0px_#000000] rotate-[-5deg] group-hover:rotate-[5deg] transition-transform">
               PT
             </div>
-            <span className="font-bold text-xl text-white hidden sm:block">
+            <span className="font-black text-2xl text-white hidden sm:block uppercase tracking-tight">
               Programmer Tools
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-3">
             {links.map((link) => (
               <Link key={link.path} to={link.path}>
                 <Button
                   variant="ghost"
-                  className={`border-4 border-black font-bold shadow-[4px_4px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#000000] transition-all ${
+                  className={`border-[5px] border-black font-black text-base shadow-[5px_5px_0px_#000000] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0px_#000000] transition-all uppercase tracking-wide ${
                     isActive(link.path)
-                      ? "bg-[#00FF80] text-black"
+                      ? "bg-[#00FF80] text-black rotate-[-2deg]"
                       : "bg-white text-black hover:bg-[#0080FF] hover:text-white"
                   }`}
                 >
@@ -50,20 +50,20 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 bg-white border-4 border-black shadow-[4px_4px_0px_#000000]"
+            className="md:hidden p-3 bg-white border-[5px] border-black shadow-[5px_5px_0px_#000000] active:shadow-[2px_2px_0px_#000000] active:translate-x-[3px] active:translate-y-[3px]"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} strokeWidth={3} /> : <Menu size={28} strokeWidth={3} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
+          <div className="md:hidden pb-4 space-y-3">
             {links.map((link) => (
               <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)}>
                 <Button
                   variant="ghost"
-                  className={`w-full border-4 border-black font-bold shadow-[4px_4px_0px_#000000] ${
+                  className={`w-full border-[5px] border-black font-black shadow-[5px_5px_0px_#000000] uppercase tracking-wide ${
                     isActive(link.path)
                       ? "bg-[#00FF80] text-black"
                       : "bg-white text-black hover:bg-[#0080FF] hover:text-white"

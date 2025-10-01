@@ -14,18 +14,18 @@ interface ToolCardProps {
 export default function ToolCard({ icon: Icon, title, description, path, color }: ToolCardProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05, rotate: -1 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      whileHover={{ scale: 1.05, rotate: 2 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <Link to={path}>
-        <div className={`${color} border-4 border-black p-6 shadow-[8px_8px_0px_#000000] hover:shadow-[4px_4px_0px_#000000] hover:translate-x-[4px] hover:translate-y-[4px] transition-all cursor-pointer h-full`}>
-          <div className="bg-white border-4 border-black w-16 h-16 flex items-center justify-center mb-4 shadow-[4px_4px_0px_#000000]">
-            <Icon size={32} className="text-black" />
+        <div className={`${color} border-[6px] border-black p-8 shadow-[12px_12px_0px_#000000] hover:shadow-[6px_6px_0px_#000000] hover:translate-x-[6px] hover:translate-y-[6px] transition-all cursor-pointer h-full rotate-[-1deg] hover:rotate-[1deg]`}>
+          <div className="bg-white border-[5px] border-black w-20 h-20 flex items-center justify-center mb-6 shadow-[6px_6px_0px_#000000] rotate-[3deg]">
+            <Icon size={40} className="text-black" strokeWidth={3} />
           </div>
-          <h3 className="font-bold text-2xl mb-2 text-black">{title}</h3>
-          <p className="text-black font-bold mb-4">{description}</p>
-          <Button className="w-full bg-black text-white border-4 border-black font-bold shadow-[4px_4px_0px_#000000] hover:bg-white hover:text-black">
-            Open Tool
+          <h3 className="font-black text-3xl mb-3 text-black uppercase tracking-tight">{title}</h3>
+          <p className="text-black font-bold text-lg mb-6 leading-tight">{description}</p>
+          <Button className="w-full bg-black text-white border-[5px] border-black font-black text-lg py-6 shadow-[6px_6px_0px_rgba(0,0,0,0.3)] hover:bg-white hover:text-black hover:shadow-[3px_3px_0px_rgba(0,0,0,0.3)] uppercase tracking-wide">
+            Open Tool →
           </Button>
         </div>
       </Link>
