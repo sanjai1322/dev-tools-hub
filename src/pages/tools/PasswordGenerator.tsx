@@ -76,7 +76,15 @@ export default function PasswordGenerator() {
               min="4"
               max="128"
               value={length}
-              onChange={(e) => setLength(Math.max(4, Math.min(128, parseInt(e.target.value) || 4)))}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value === '') {
+                  setLength(4);
+                } else {
+                  const parsed = parseInt(value);
+                  setLength(Math.max(4, Math.min(128, isNaN(parsed) ? 4 : parsed)));
+                }
+              }}
               className="border-[5px] border-black shadow-[6px_6px_0px_#000000] font-bold text-lg"
             />
           </div>
