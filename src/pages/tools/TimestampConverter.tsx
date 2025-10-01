@@ -14,7 +14,15 @@ export default function TimestampConverter() {
   const timestampToHuman = () => {
     try {
       const ts = parseInt(timestamp);
+      if (isNaN(ts)) {
+        toast.error("Invalid timestamp: must be a number");
+        return;
+      }
       const date = new Date(ts * 1000);
+      if (isNaN(date.getTime())) {
+        toast.error("Invalid timestamp: out of range");
+        return;
+      }
       setHumanDate(date.toISOString().slice(0, 16));
       toast.success("Converted timestamp to human-readable date!");
     } catch (error) {
@@ -25,6 +33,10 @@ export default function TimestampConverter() {
   const humanToTimestamp = () => {
     try {
       const date = new Date(humanDate);
+      if (isNaN(date.getTime())) {
+        toast.error("Invalid date format");
+        return;
+      }
       const ts = Math.floor(date.getTime() / 1000);
       setTimestamp(ts.toString());
       toast.success("Converted date to UNIX timestamp!");

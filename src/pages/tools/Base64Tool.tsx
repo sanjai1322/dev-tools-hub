@@ -16,7 +16,8 @@ export default function Base64Tool() {
 
   const encode = () => {
     try {
-      const encoded = btoa(encodeInput);
+      // Handle Unicode characters properly
+      const encoded = btoa(unescape(encodeURIComponent(encodeInput)));
       setEncodeOutput(encoded);
       toast.success("Encoded successfully!");
     } catch (error) {
@@ -26,7 +27,8 @@ export default function Base64Tool() {
 
   const decode = () => {
     try {
-      const decoded = atob(decodeInput);
+      // Handle Unicode characters properly
+      const decoded = decodeURIComponent(escape(atob(decodeInput)));
       setDecodeOutput(decoded);
       toast.success("Decoded successfully!");
     } catch (error) {

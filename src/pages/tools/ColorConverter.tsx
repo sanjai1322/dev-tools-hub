@@ -13,7 +13,13 @@ export default function ColorConverter() {
   const [hslColor, setHslColor] = useState("hsl(328, 100%, 50%)");
 
   const hexToRgb = (hex: string) => {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    // Remove # if present and validate
+    const cleanHex = hex.replace('#', '');
+    if (!/^[0-9A-F]{6}$/i.test(cleanHex)) {
+      return null;
+    }
+    
+    const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(cleanHex);
     return result
       ? {
           r: parseInt(result[1], 16),
@@ -49,12 +55,17 @@ export default function ColorConverter() {
   };
 
   const updateFromHex = (hex: string) => {
-    setHexColor(hex);
-    const rgb = hexToRgb(hex);
+    // Ensure hex starts with #
+    const formattedHex = hex.startsWith('#') ? hex : `#${hex}`;
+    setHexColor(formattedHex);
+    
+    const rgb = hexToRgb(formattedHex);
     if (rgb) {
       setRgbColor(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`);
       const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
       setHslColor(`hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`);
+    } else {
+      toast.error("Invalid HEX color format");
     }
   };
 
