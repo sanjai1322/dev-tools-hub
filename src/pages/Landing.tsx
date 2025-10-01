@@ -57,7 +57,7 @@ export default function Landing() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 px-4">
+      <section className="relative overflow-hidden py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ export default function Landing() {
               <span className="font-black text-black text-xl uppercase tracking-tight">🚀 DEVELOPER TOOLS</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-black mb-8 text-black leading-none uppercase tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 sm:mb-8 text-black leading-none uppercase tracking-tighter">
               All-in-One
               <br />
               <span className="bg-[#FF0080] border-[6px] border-black px-6 py-2 inline-block shadow-[12px_12px_0px_#000000] rotate-[2deg] mt-4">
@@ -77,15 +77,15 @@ export default function Landing() {
               </span>
             </h1>
             
-            <p className="text-2xl md:text-3xl font-bold text-black mb-10 max-w-3xl mx-auto leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black mb-8 sm:mb-10 max-w-3xl mx-auto leading-tight">
               The fastest way to solve your daily coding problems.
               <br />
               <span className="font-black">No sign-up. No BS. Just tools.</span>
             </p>
 
             <Link to="/tools">
-              <Button className="bg-[#0080FF] text-white border-[6px] border-black px-12 py-8 text-2xl font-black shadow-[12px_12px_0px_#000000] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-[6px_6px_0px_#000000] transition-all uppercase tracking-wide rotate-[-1deg] hover:rotate-[1deg]">
-                Explore Tools <ArrowRight className="ml-3" size={32} strokeWidth={3} />
+              <Button className="bg-[#0080FF] text-white border-[4px] sm:border-[6px] border-black px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 text-lg sm:text-xl md:text-2xl font-black shadow-[8px_8px_0px_#000000] sm:shadow-[12px_12px_0px_#000000] hover:translate-x-[4px] sm:hover:translate-x-[6px] hover:translate-y-[4px] sm:hover:translate-y-[6px] hover:shadow-[4px_4px_0px_#000000] sm:hover:shadow-[6px_6px_0px_#000000] transition-all uppercase tracking-wide rotate-[-1deg] hover:rotate-[1deg]">
+                Explore Tools <ArrowRight className="ml-2 sm:ml-3 w-6 h-6 sm:w-8 sm:h-8" strokeWidth={3} />
               </Button>
             </Link>
           </motion.div>
@@ -98,7 +98,7 @@ export default function Landing() {
       </section>
 
       {/* Featured Tools */}
-      <section className="py-24 px-4 bg-[#FFD700] border-y-[6px] border-black shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
+      <section className="py-12 sm:py-16 md:py-24 px-4 bg-[#FFD700] border-y-[4px] sm:border-y-[6px] border-black shadow-[0_4px_0px_#000000,0_-4px_0px_#000000] sm:shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -106,10 +106,10 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-black text-center mb-6 text-black uppercase tracking-tighter">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-center mb-4 sm:mb-6 text-black uppercase tracking-tighter">
               Featured Tools
             </h2>
-            <p className="text-center text-2xl font-bold text-black mb-16 uppercase tracking-wide">
+            <p className="text-center text-lg sm:text-xl md:text-2xl font-bold text-black mb-8 sm:mb-12 md:mb-16 uppercase tracking-wide">
               Everything you need, nothing you don't
             </p>
 
@@ -131,9 +131,9 @@ export default function Landing() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,7 +186,7 @@ export default function Landing() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 px-4 bg-neutral-200 border-y-[6px] border-black shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
+      <section className="py-12 sm:py-16 md:py-24 px-4 bg-neutral-200 border-y-[4px] sm:border-y-[6px] border-black shadow-[0_4px_0px_#000000,0_-4px_0px_#000000] sm:shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -195,28 +195,28 @@ export default function Landing() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-7xl font-black mb-6 text-black uppercase tracking-tighter">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-4 sm:mb-6 text-black uppercase tracking-tighter">
               TRUSTED BY DEVELOPERS
             </h2>
-            <p className="text-2xl font-bold text-black">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-black">
               Join thousands of developers worldwide
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#FFD700] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[-2deg] hover:rotate-[0deg] transition-transform"
+              className="bg-[#FFD700] border-[6px] sm:border-[8px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_#000000] sm:shadow-[12px_12px_0px_#000000] rotate-[-2deg] hover:rotate-[0deg] transition-transform"
             >
-              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+              <p className="text-lg sm:text-xl md:text-2xl font-black text-black mb-6 sm:mb-8 leading-tight">
                 "These tools save me hours every week. The JSON formatter alone is worth bookmarking."
               </p>
               <div className="mt-6">
-                <p className="font-black text-black text-xl uppercase tracking-tight">Sarah Chen</p>
-                <p className="font-bold text-black text-lg">Full-Stack Dev</p>
+                <p className="font-black text-black text-lg sm:text-xl uppercase tracking-tight">Sarah Chen</p>
+                <p className="font-bold text-black text-base sm:text-lg">Full-Stack Dev</p>
               </div>
             </motion.div>
 
@@ -225,14 +225,14 @@ export default function Landing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-[#FFB3D9] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[1deg] hover:rotate-[0deg] transition-transform"
+              className="bg-[#FFB3D9] border-[6px] sm:border-[8px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_#000000] sm:shadow-[12px_12px_0px_#000000] rotate-[1deg] hover:rotate-[0deg] transition-transform"
             >
-              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+              <p className="text-lg sm:text-xl md:text-2xl font-black text-black mb-6 sm:mb-8 leading-tight">
                 "Finally, a tools site that doesn't try to sell me something. Just pure utility."
               </p>
               <div className="mt-6">
-                <p className="font-black text-black text-xl uppercase tracking-tight">Marcus Kim</p>
-                <p className="font-bold text-black text-lg">Backend Engineer</p>
+                <p className="font-black text-black text-lg sm:text-xl uppercase tracking-tight">Marcus Kim</p>
+                <p className="font-bold text-black text-base sm:text-lg">Backend Engineer</p>
               </div>
             </motion.div>
 
@@ -241,14 +241,14 @@ export default function Landing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-[#7DD3FC] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[-1deg] hover:rotate-[0deg] transition-transform"
+              className="bg-[#7DD3FC] border-[6px] sm:border-[8px] border-black p-6 sm:p-8 shadow-[8px_8px_0px_#000000] sm:shadow-[12px_12px_0px_#000000] rotate-[-1deg] hover:rotate-[0deg] transition-transform"
             >
-              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+              <p className="text-lg sm:text-xl md:text-2xl font-black text-black mb-6 sm:mb-8 leading-tight">
                 "I've replaced 5 different websites with just this one. Clean, fast, perfect."
               </p>
               <div className="mt-6">
-                <p className="font-black text-black text-xl uppercase tracking-tight">Alex Rivera</p>
-                <p className="font-bold text-black text-lg">DevOps Lead</p>
+                <p className="font-black text-black text-lg sm:text-xl uppercase tracking-tight">Alex Rivera</p>
+                <p className="font-bold text-black text-base sm:text-lg">DevOps Lead</p>
               </div>
             </motion.div>
           </div>
@@ -256,7 +256,7 @@ export default function Landing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-4">
+      <section className="py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -264,15 +264,15 @@ export default function Landing() {
             transition={{ duration: 0.6, type: "spring" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-black mb-8 text-black uppercase tracking-tighter leading-none">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 sm:mb-8 text-black uppercase tracking-tighter leading-none">
               Ready to boost your productivity?
             </h2>
-            <p className="text-2xl font-bold text-black mb-10 uppercase tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-8 sm:mb-10 uppercase tracking-wide">
               Join thousands of developers using our tools daily
             </p>
             <Link to="/tools">
-              <Button className="bg-[#FF0080] text-white border-[6px] border-black px-12 py-8 text-2xl font-black shadow-[12px_12px_0px_#000000] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-[6px_6px_0px_#000000] transition-all uppercase tracking-wide rotate-[1deg] hover:rotate-[-1deg]">
-                Start Using Tools Now <ArrowRight className="ml-3" size={32} strokeWidth={3} />
+              <Button className="bg-[#FF0080] text-white border-[4px] sm:border-[6px] border-black px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 text-lg sm:text-xl md:text-2xl font-black shadow-[8px_8px_0px_#000000] sm:shadow-[12px_12px_0px_#000000] hover:translate-x-[4px] sm:hover:translate-x-[6px] hover:translate-y-[4px] sm:hover:translate-y-[6px] hover:shadow-[4px_4px_0px_#000000] sm:hover:shadow-[6px_6px_0px_#000000] transition-all uppercase tracking-wide rotate-[1deg] hover:rotate-[-1deg]">
+                Start Using Tools Now <ArrowRight className="ml-2 sm:ml-3 w-6 h-6 sm:w-8 sm:h-8" strokeWidth={3} />
               </Button>
             </Link>
           </motion.div>
