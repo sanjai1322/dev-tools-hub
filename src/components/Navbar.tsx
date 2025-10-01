@@ -25,7 +25,7 @@ export default function Navbar() {
               PT
             </div>
             <span className="font-black text-2xl text-white hidden sm:block uppercase tracking-tight">
-              Programmer Tools
+              DevToolsHUB
             </span>
           </Link>
 

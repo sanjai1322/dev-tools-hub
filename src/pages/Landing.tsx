@@ -73,7 +73,7 @@ export default function Landing() {
               All-in-One
               <br />
               <span className="bg-[#FF0080] border-[6px] border-black px-6 py-2 inline-block shadow-[12px_12px_0px_#000000] rotate-[2deg] mt-4">
-                Programmer Tools
+                DevToolsHUB
               </span>
             </h1>
             

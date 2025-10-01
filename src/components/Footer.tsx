@@ -12,7 +12,7 @@ export default function Footer() {
                 PT
               </div>
               <span className="font-black text-2xl text-white uppercase tracking-tight">
-                Programmer Tools
+                DevToolsHUB
               </span>
             </div>
             <p className="text-white font-bold text-lg leading-relaxed">
@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t-[5px] border-black text-center">
           <p className="text-white font-black text-lg uppercase tracking-wide">
-            © 2024 Programmer Tools Hub. Built with ❤️ for developers.
+            © 2024 DevToolsHUB. Built with ❤️ for developers.
           </p>
         </div>
       </div>
