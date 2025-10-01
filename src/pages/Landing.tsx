@@ -186,28 +186,72 @@ export default function Landing() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-24 px-4 bg-[#9D4EDD] border-y-[6px] border-black shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-24 px-4 bg-neutral-200 border-y-[6px] border-black shadow-[0_6px_0px_#000000,0_-6px_0px_#000000]">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, type: "spring" }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white border-[6px] border-black p-14 shadow-[12px_12px_0px_#000000] rotate-[1deg]"
+            className="text-center mb-16"
           >
-            <p className="text-3xl md:text-4xl font-black text-black mb-8 leading-tight">
-              "This is the tool collection I wish I had built myself. Saves me hours every week!"
+            <h2 className="text-5xl md:text-7xl font-black mb-6 text-black uppercase tracking-tighter">
+              TRUSTED BY DEVELOPERS
+            </h2>
+            <p className="text-2xl font-bold text-black">
+              Join thousands of developers worldwide
             </p>
-            <div className="flex items-center justify-center gap-6">
-              <div className="w-20 h-20 bg-[#00FF80] border-[5px] border-black rounded-full flex items-center justify-center font-black text-3xl shadow-[6px_6px_0px_#000000] rotate-[-5deg]">
-                JD
-              </div>
-              <div className="text-left">
-                <p className="font-black text-black text-xl uppercase tracking-tight">Jane Developer</p>
-                <p className="font-bold text-black text-lg">Senior Engineer @ TechCorp</p>
-              </div>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-[#FFD700] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[-2deg] hover:rotate-[0deg] transition-transform"
+            >
+              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+                "These tools save me hours every week. The JSON formatter alone is worth bookmarking."
+              </p>
+              <div className="mt-6">
+                <p className="font-black text-black text-xl uppercase tracking-tight">Sarah Chen</p>
+                <p className="font-bold text-black text-lg">Full-Stack Dev</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-[#FFB3D9] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[1deg] hover:rotate-[0deg] transition-transform"
+            >
+              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+                "Finally, a tools site that doesn't try to sell me something. Just pure utility."
+              </p>
+              <div className="mt-6">
+                <p className="font-black text-black text-xl uppercase tracking-tight">Marcus Kim</p>
+                <p className="font-bold text-black text-lg">Backend Engineer</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-[#7DD3FC] border-[8px] border-black p-8 shadow-[12px_12px_0px_#000000] rotate-[-1deg] hover:rotate-[0deg] transition-transform"
+            >
+              <p className="text-xl md:text-2xl font-black text-black mb-8 leading-tight">
+                "I've replaced 5 different websites with just this one. Clean, fast, perfect."
+              </p>
+              <div className="mt-6">
+                <p className="font-black text-black text-xl uppercase tracking-tight">Alex Rivera</p>
+                <p className="font-bold text-black text-lg">DevOps Lead</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
