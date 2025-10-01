@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import ToolCard from "@/components/ToolCard";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import { Code2, Regex, Key, FileCode, GitCompare, FileText, Search } from "lucide-react";
+import { Code2, Regex, Key, FileCode, GitCompare, FileText, Search, Hash, Type, Lock } from "lucide-react";
 import { useState } from "react";
 
 export default function Tools() {
@@ -61,6 +61,13 @@ export default function Tools() {
     },
     {
       icon: Key,
+      title: "JWT Generator",
+      description: "Create JWT tokens with custom payload",
+      path: "/tools/jwt-generator",
+      color: "bg-[#00FF80]",
+    },
+    {
+      icon: Hash,
       title: "Hash Generator",
       description: "Generate MD5 and SHA256 hashes",
       path: "/tools/hash",
@@ -86,6 +93,20 @@ export default function Tools() {
       description: "Convert UNIX timestamps to dates",
       path: "/tools/timestamp",
       color: "bg-[#0080FF]",
+    },
+    {
+      icon: Type,
+      title: "Text Case Converter",
+      description: "Convert text between different cases",
+      path: "/tools/text-case",
+      color: "bg-[#FF0080]",
+    },
+    {
+      icon: Lock,
+      title: "Password Generator",
+      description: "Generate secure random passwords",
+      path: "/tools/password",
+      color: "bg-[#9D4EDD]",
     },
   ];
 

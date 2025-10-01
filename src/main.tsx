@@ -24,6 +24,9 @@ import HashGenerator from "./pages/tools/HashGenerator.tsx";
 import LoremGenerator from "./pages/tools/LoremGenerator.tsx";
 import ColorConverter from "./pages/tools/ColorConverter.tsx";
 import TimestampConverter from "./pages/tools/TimestampConverter.tsx";
+import JwtGenerator from "./pages/tools/JwtGenerator.tsx";
+import TextCaseConverter from "./pages/tools/TextCaseConverter.tsx";
+import PasswordGenerator from "./pages/tools/PasswordGenerator.tsx";
 import "./types/global.d.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
@@ -70,10 +73,13 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/tools/diff" element={<CodeDiff />} />
             <Route path="/tools/markdown" element={<MarkdownPreview />} />
             <Route path="/tools/jwt" element={<JwtDecoder />} />
+            <Route path="/tools/jwt-generator" element={<JwtGenerator />} />
             <Route path="/tools/hash" element={<HashGenerator />} />
             <Route path="/tools/lorem" element={<LoremGenerator />} />
             <Route path="/tools/color" element={<ColorConverter />} />
             <Route path="/tools/timestamp" element={<TimestampConverter />} />
+            <Route path="/tools/text-case" element={<TextCaseConverter />} />
+            <Route path="/tools/password" element={<PasswordGenerator />} />
             <Route path="/auth" element={<AuthPage redirectAfterAuth="/" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
