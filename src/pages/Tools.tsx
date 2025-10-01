@@ -52,6 +52,41 @@ export default function Tools() {
       path: "/tools/markdown",
       color: "bg-[#9D4EDD]",
     },
+    {
+      icon: Key,
+      title: "JWT Decoder",
+      description: "Decode JWT tokens to view header and payload",
+      path: "/tools/jwt",
+      color: "bg-[#FF0080]",
+    },
+    {
+      icon: Key,
+      title: "Hash Generator",
+      description: "Generate MD5 and SHA256 hashes",
+      path: "/tools/hash",
+      color: "bg-[#9D4EDD]",
+    },
+    {
+      icon: FileText,
+      title: "Lorem Ipsum",
+      description: "Generate dummy text for designs",
+      path: "/tools/lorem",
+      color: "bg-[#00FF80]",
+    },
+    {
+      icon: FileCode,
+      title: "Color Converter",
+      description: "Convert HEX, RGB, and HSL colors",
+      path: "/tools/color",
+      color: "bg-[#FFD700]",
+    },
+    {
+      icon: Code2,
+      title: "Timestamp Converter",
+      description: "Convert UNIX timestamps to dates",
+      path: "/tools/timestamp",
+      color: "bg-[#0080FF]",
+    },
   ];
 
   const filteredTools = tools.filter(

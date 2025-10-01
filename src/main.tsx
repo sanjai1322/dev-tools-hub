@@ -19,6 +19,11 @@ import UuidGenerator from "./pages/tools/UuidGenerator.tsx";
 import Base64Tool from "./pages/tools/Base64Tool.tsx";
 import CodeDiff from "./pages/tools/CodeDiff.tsx";
 import MarkdownPreview from "./pages/tools/MarkdownPreview.tsx";
+import JwtDecoder from "./pages/tools/JwtDecoder.tsx";
+import HashGenerator from "./pages/tools/HashGenerator.tsx";
+import LoremGenerator from "./pages/tools/LoremGenerator.tsx";
+import ColorConverter from "./pages/tools/ColorConverter.tsx";
+import TimestampConverter from "./pages/tools/TimestampConverter.tsx";
 import "./types/global.d.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
@@ -64,6 +69,11 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/tools/base64" element={<Base64Tool />} />
             <Route path="/tools/diff" element={<CodeDiff />} />
             <Route path="/tools/markdown" element={<MarkdownPreview />} />
+            <Route path="/tools/jwt" element={<JwtDecoder />} />
+            <Route path="/tools/hash" element={<HashGenerator />} />
+            <Route path="/tools/lorem" element={<LoremGenerator />} />
+            <Route path="/tools/color" element={<ColorConverter />} />
+            <Route path="/tools/timestamp" element={<TimestampConverter />} />
             <Route path="/auth" element={<AuthPage redirectAfterAuth="/" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
